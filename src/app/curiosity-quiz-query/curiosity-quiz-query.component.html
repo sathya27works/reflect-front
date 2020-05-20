@@ -1,7 +1,9 @@
-<p>curiosity-quiz-query works!</p>
 
+<div id="curiosityqueryid">
+    <p>curiosity Quiz</p>
+<table id="curiosityQuerytable">
 <tr *ngFor="let entry of entries">
-    <td>{{ entry.question }}</td>
+    <td id="quizQueryId">{{ entry.question }}</td>
     <td>
         <input type="radio" name="radiogroup" 
             
@@ -15,3 +17,5 @@
             <!-- (change)="onSelectionChange(entry)"> -->
     </td>
 </tr>
+</table>
+</div>

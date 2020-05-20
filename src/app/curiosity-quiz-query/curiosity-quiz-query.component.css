@@ -1,0 +1,32 @@
+#curiosityqueryid{
+    margin-top: 80px;
+}
+
+#curiosityQuerytable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 1000px;
+    float: left;
+    margin-left: 100px;
+  }
+  
+  #curiosityQuerytable td, #curiosityQuerytable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #curiosityQuerytable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #curiosityQuerytable tr:hover {background-color: #ddd;}
+  
+  #curiosityQuerytable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  #quizQueryId{
+      width: 850px;
+  }
