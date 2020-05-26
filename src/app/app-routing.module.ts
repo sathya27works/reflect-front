@@ -22,7 +22,7 @@ const routes: Routes = [
         component: HomePageReflectComponent
       },
       {
-        path: 'curiosityQuizQuery',
+        path: 'curiosityQuiz',
         component: CuriosityQuizQueryComponent
       }
     ]

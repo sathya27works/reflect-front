@@ -1,21 +1,24 @@
-
-<div id="curiosityqueryid">
-    <p>curiosity Quiz</p>
-<table id="curiosityQuerytable">
-<tr *ngFor="let entry of entries">
-    <td id="quizQueryId">{{ entry.question }}</td>
-    <td>
-        <input type="radio" name="radiogroup" 
-            
-            [value]="entry.queryid" >
-            <!-- (change)="onSelectionChange(entry)"> -->
-    </td>
-    <td>
-        <input type="radio" name="radiogroup" 
-            
-            [value]="entry.queryid" >
-            <!-- (change)="onSelectionChange(entry)"> -->
-    </td>
-</tr>
-</table>
+<div class="container col-xs-12 col-md-12"> 
+    <div class="row">
+      <div class="col-xs-12 col-md-12 mainDiv">
+          <div class="commonHeader">
+            <span>Curiosity Quiz</span>  
+          </div>
+          <div class="quizSection" *ngFor="let entry of entries">
+          <div class="quizQuestionCls">
+            {{ entry.question }}
+          </div>
+          <div class="quizAnsCls">
+            <input type="radio" name="radiogroup" [value]="entry.queryid"> 
+          </div>
+          </div>
+          <div class="submitBtnDiv">
+              <button type="button" class="btn" class="submitBtn">
+                <a routerLink="/submitAnswer">
+                  <span>Submit</span>
+                </a>
+              </button>
+          </div>
+      </div>
+    </div>
 </div>
