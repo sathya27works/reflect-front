@@ -1,0 +1,70 @@
+.homeHeader{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    color: white;
+    font-style: italic;
+    font-size: xx-large;
+    font-family: Arial !important;
+  }
+.subHeaderCls{
+    background-color: whitesmoke;
+    height: 455px;
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid #eee;
+  }
+.homeDivFormat{
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+  }
+.homemaindiv{   
+    background-color : #0033A0;
+    margin-top: 150px;
+    height: 605px;
+}
+.homeSubHeader{   
+  text-align: center;
+  color: #0033A0;
+  font-size: 40px;
+  margin-top: 10px;
+  font-family: Arial !important;
+}
+.homeDisplayCls{    
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid #eee;
+    height: 103px;
+    width: 300px;
+    margin: 15px 0px 15px 4px;
+    font-size: x-large;
+    font-family: Arial !important;
+}
+.homeDisplayCls1{    
+  border-radius: 10px;
+  justify-content: center;
+  border: 1px solid #eee;
+  height: 70px;
+  width: 300px;
+  margin: 15px 0px 15px 4px;
+  font-size: x-large;
+  font-family: Arial !important;
+}
+.homeDisplayCls2{    
+  border-radius: 10px;
+  justify-content: center;
+  border: 1px solid #eee;
+  height: 103px;
+  width: 189px;
+  margin: 15px 0px 15px 4px;
+  font-size: x-large;
+  font-family: Arial !important;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
