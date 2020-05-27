@@ -7,25 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuriosityQuizQueryComponent implements OnInit {
   entries: Object[];
+  constructor() {
 
-    constructor() {
-     
     this.entries = [
       {
-        queryid:"curiousityQuiz1",
-        question: "A Need for Cognition is a scientific measure of intellectual curiosity. Take the quiz by answering true or false and PLACING JUST THE LETTER Y in the column you agree with"
-        
-      },
-      {
-        queryid:"curiousityQuiz1",
-        question: "I would prefer complex to simple problems."
-        
+        queryid:"1",
+        question: "A Need for Cognition is a scientific measure of intellectual curiosity. Take the quiz by answering true or false and PLACING JUST THE LETTER Y in the column you agree with",
+        option1: "True",
+        option2: "False"
+      
       }
     ];
-   
-  }
+   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
