@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HomePageReflectComponent } from './home-page-reflect/home-page-reflect.component';
 import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-quiz-query.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageReflectComponent,
     CuriosityQuizQueryComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CuriosityResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

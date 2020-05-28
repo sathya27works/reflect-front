@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-curiosity-quiz-query',
@@ -7,18 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuriosityQuizQueryComponent implements OnInit {
   entries: Object[];
-  constructor() {
 
-    this.entries = [
-      {
-        queryid:"1",
-        question: "A Need for Cognition is a scientific measure of intellectual curiosity. Take the quiz by answering true or false and PLACING JUST THE LETTER Y in the column you agree with",
-        option1: "True",
-        option2: "False"
-      
+  constructor(private httpClient: HttpClient){
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8')
+                      .set('Access-Control-Allow-Origin','*');
+    this.httpClient.get('http://localhost:8090/quiz/curiosity',{headers: headers})
+    .subscribe(
+      (data:any[]) => {
+        
+          console.log("Received data"); 
+          this.entries = data;
       }
-    ];
-   }
+    )
+}
+  
 
   ngOnInit(): void {
   }

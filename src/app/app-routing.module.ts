@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageReflectComponent } from './home-page-reflect/home-page-reflect.component';
 import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-quiz-query.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'curiosityQuiz',
         component: CuriosityQuizQueryComponent
+      },
+      {
+        path: 'curiosityResults',
+        component: CuriosityResultsComponent
       }
     ]
   }

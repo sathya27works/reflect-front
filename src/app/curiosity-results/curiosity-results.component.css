@@ -1,0 +1,19 @@
+.mainDiv{
+    margin-top: 100px;
+  }
+  .commonHeader{
+    color: #0033A0;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  hr{
+    border-top: 1px solid #404040;
+  }
+  .quizAnsCls{
+    margin-top: 20px;
+  }
