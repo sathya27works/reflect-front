@@ -5,6 +5,7 @@
             <span>Curiosity Quiz</span>  
           </div>
           <hr/>
+          
           <div class="quizSection" *ngFor="let entry of entries">
           <div class="queryId appTxt" style="font-weight: bold;margin-bottom: 10px;">Question: {{entry.questionNo}}</div>
           <div class="quizQuestionCls appTxt">
@@ -12,23 +13,28 @@
           </div>
           <div class="quizAnsCls">
             <div>
-              <input id="{{entry.answer}}" type="radio" value="True" name="{{entry.questionNo}}" ngModel>
-              <label for="{{entry.answer}}">True</label>
+            
+              <input type="radio" value="True" name="{{entry.questionNo}}" ngModel required >
+              <label for="{{entry.userAnswer}}">True</label>
            </div>         
             <div>
-                <input id="{{entry.answer}}" type="radio" value="False" name="{{entry.questionNo}}" ngModel>
-                <label for="{{entry.answer}}">False</label>
+                <input id="{{entry.userAnswer}}" type="radio" value="False" name="{{entry.questionNo}}" ngModel required>
+                <label for="{{entry.userAnswer}}">False</label>
               </div>
+              <div hidden="!{{entry.userAnswer}}.hasError('required')">
+                The gender is required
+                </div>
+               
           </div>
           </div>
           <div class="submitBtnDiv">
-              
-                <a routerLink="/curiosityResults" >
-                  <button type="button" class="btn" class="submitBtn" ngSubmit="submitQuiz($event)">Submit</button>
-                  <span>Submit</span>
-                
+                <!-- <a routerLink="/curiosityResults" > -->
+                  
+                  <a [routerLink]="['/curiosityResults']">
+                  <button type="button" class="btn" class="submitBtn" ngSubmit="submitQuiz()">Submit</button>
+                              
                 </a>
-              
+
           </div>
       </div>
     </div>

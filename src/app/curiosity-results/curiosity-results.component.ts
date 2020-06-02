@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../service/dataService';
 
 @Component({
   selector: 'app-curiosity-results',
@@ -8,27 +10,29 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 })
 export class CuriosityResultsComponent implements OnInit {
 
-  resultDetails: Object[];
+  resultDetails: string;
+  entries: Object[];
+  private sub: any;
   
-  constructor(private httpClient: HttpClient){
-    let headers = new HttpHeaders();
-    headers = headers.set('Content-Type', 'application/json; charset=utf-8')
-                      .set('Access-Control-Allow-Origin','*');
-    this.httpClient.get('http://localhost:8090/quiz/curiosity',{headers: headers})
-    .subscribe(
-      (data:any[]) => {
-          console.log("Received Curiosity Result data"); 
-          this.resultDetails = data;
-          
-      }
-    )
+
+constructor(private http: HttpClient, private route: ActivatedRoute,public dataservice: DataService){
 }
 
   ngOnInit(): void {
+    this.entries = this.dataservice.entries; 
+   
+    console.log("Invoked Curiosity Result page"); 
+    this.sub = this.route.params.subscribe(params => {
+      
+      console.log(this.entries);
+      let headers = new HttpHeaders();
+      let body = JSON.stringify(this.entries);
+    
+    headers = headers.set('Access-Control-Allow-Origin','*');
+      this.http.post<any>('http://localhost:8090/submitQuiz', this.entries,{headers}).subscribe(data => {
+        this.resultDetails = data;
+})
+   });
   }
 
-  submitQuiz(event: any){
-    console.log('submitting quiz answers');
-    this.resultDetails = event;
-  }
 }
