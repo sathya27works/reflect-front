@@ -4,6 +4,7 @@ import { HomePageReflectComponent } from './home-page-reflect/home-page-reflect.
 import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-quiz-query.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
+import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'curiosityResults',
         component: CuriosityResultsComponent
+      },
+      {
+        path: 'growthMindesetQuiz',
+        component: GrowthMindsetQuizComponent
       }
     ]
   }

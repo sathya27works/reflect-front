@@ -8,6 +8,7 @@ import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-qu
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
+import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CuriosityResultsComponent } from './curiosity-results/curiosity-results
     HomePageReflectComponent,
     CuriosityQuizQueryComponent,
     LoginPageComponent,
-    CuriosityResultsComponent
+    CuriosityResultsComponent,
+    GrowthMindsetQuizComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@
   }
 .subHeaderCls{
     background-color: whitesmoke;
-    height: 350px;
+    height: 310px;
     border-radius: 10px;
     justify-content: center;
     border: 1px solid #eee;
@@ -25,7 +25,7 @@
 .homemaindiv{   
     background-color : #0033A0;
     margin-top: 150px;
-    height: 450px;
+    height: 400px;
 }
 .homeSubHeader{   
   text-align: center;
@@ -38,30 +38,30 @@
     border-radius: 10px;
     justify-content: center;
     border: 1px solid #eee;
-    height: 70px;
-    width: 180px;
-    margin: 15px 0px 15px -15px;
-    font-size: 20px;
+    height: 60px;
+    width: 160px;
+    margin: 15px 0px 15px -20px;
+    font-size: 18px;
     font-family: Arial !important;
 }
 .homeDisplayCls1{    
   border-radius: 10px;
   justify-content: center;
   border: 1px solid #eee;
-  height: 60px;
-  width: 200px;
-  margin: 5px 0px 10px -25px;
-  font-size: 20px;
+  height: 51px;
+  width: 190px;
+  margin: 5px 0px 10px -36px;
+  font-size: 18px;
   font-family: Arial !important;
 }
 .homeDisplayCls2{    
   border-radius: 10px;
   justify-content: center;
   border: 1px solid #eee;
-  height: 88px;
-  width: 145px;
-  margin: 5px 0px 5px -27px;
-  font-size: 20px;
+  height: 76px;
+  width: 135px;
+  margin: 5px 0px 5px -33px;
+  font-size: 17px;
   font-family: Arial !important;
 }
 a{
