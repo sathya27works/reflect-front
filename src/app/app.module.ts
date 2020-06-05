@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-qu
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
+import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
+import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
 import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
 
 @NgModule({
@@ -16,12 +19,16 @@ import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset
     HomePageReflectComponent,
     CuriosityQuizQueryComponent,
     LoginPageComponent,
+    BlindQuizQueryComponent,
+    BlindQuizSaveComponent,
     CuriosityResultsComponent,
     GrowthMindsetQuizComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

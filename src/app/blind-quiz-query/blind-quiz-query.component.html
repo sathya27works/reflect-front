@@ -1,0 +1,21 @@
+<div id="blindqueryid">
+  <h1>Blind Spot Quiz</h1>
+  <div class="container">
+    <form [formGroup]="form" (ngSubmit)="submit(newHero.value)">
+
+      <div class="form-group">
+        <label for="website">Pick five or six that you feel best describe you, from list below :-</label>
+        <div *ngFor="let web of websiteList">
+          <label>
+            <input type="checkbox" [value]="web.id" (change)="onCheckboxChange($event)" />
+            {{web.name}}
+          </label>
+        </div>
+        <p>Your results will now be saved, under a name of your choosing, so that you can send your friends and
+          colleagues directly to your Window.</p>
+        <input #newHero><button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+      
+    </form>
+  </div>
+</div>

@@ -5,6 +5,9 @@ import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-qu
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
 import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
+import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
+import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
+
 
 const routes: Routes = [
   {
@@ -34,6 +37,14 @@ const routes: Routes = [
       {
         path: 'growthMindesetQuiz',
         component: GrowthMindsetQuizComponent
+      },
+      {
+        path: 'blindQuizQuery',
+        component: BlindQuizQueryComponent
+      },
+      {
+        path: 'blindQuizSave',
+        component: BlindQuizSaveComponent
       }
     ]
   }
