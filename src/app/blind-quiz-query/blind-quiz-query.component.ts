@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import {Router} from "@angular/router";
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-blind-quiz-query',
@@ -24,7 +24,7 @@ export class
     { id: 'complex', name: 'complex' }
   ];
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute) {
     this.form = this.formBuilder.group({
       website: this.formBuilder.array([], [Validators.required])
     })
@@ -43,7 +43,8 @@ export class
   submit(newHero: string) {
     console.log(this.form.value.website);
     console.log(newHero);
-    this.router.navigate(['/blindQuizSave']);
+    
+    this.router.navigate(['/blindQuizSave', { newHero: newHero ,  website: this.form.value.website }]);
   }
 
 
