@@ -17,7 +17,14 @@ export class BlindQuizSaveComponent implements OnInit {
   ngOnInit(): void {
     this.newHero = this.route.snapshot.paramMap.get('newHero');
     this.website = this.route.snapshot.paramMap.get('website');
-    this.url = "http://localhost:8090/submitBlindSpot"+"/"+this.newHero+"/"+this.website+"/"+"user";
+    if(this.website == ""){
+      alert('Select Checkbox!');
+      return;
+    }else if(this.newHero == ""){
+      alert('Enter Unique Name!');
+      return;
+    }else{
+      this.url = "http://localhost:8090/submitBlindSpot"+"/"+this.newHero+"/"+this.website+"/"+"user";
      let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8')
                       .set('Access-Control-Allow-Origin','*');
@@ -29,6 +36,8 @@ export class BlindQuizSaveComponent implements OnInit {
        console.log('>>>>>>>> '+error);
      }
     )
+    }
+    
   }
 
 }

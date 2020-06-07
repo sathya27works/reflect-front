@@ -43,8 +43,15 @@ export class
   submit(newHero: string) {
     console.log(this.form.value.website);
     console.log(newHero);
-    
+    if(this.form.value.website == ""){
+      alert('Select Checkbox!');
+      return;
+    }else if(newHero == ""){
+      alert('Enter Unique Name!');
+      return;
+    }else{
     this.router.navigate(['/blindQuizSave', { newHero: newHero ,  website: this.form.value.website }]);
+    }
   }
 
 
