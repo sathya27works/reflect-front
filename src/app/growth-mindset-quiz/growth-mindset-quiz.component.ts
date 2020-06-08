@@ -16,7 +16,7 @@ export class GrowthMindsetQuizComponent implements OnInit, OnDestroy {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8')
                       .set('Access-Control-Allow-Origin','*');
-    this.httpClient.get('http://localhost:8090/growthMindsetQuiz',{headers: headers})
+    this.httpClient.get('http://localhost:8090/quiz/growthMindset',{headers: headers})
     .subscribe(
       (data:any[]) => {        
           console.log(data); 
