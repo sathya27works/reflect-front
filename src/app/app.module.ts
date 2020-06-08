@@ -12,6 +12,7 @@ import { CuriosityResultsComponent } from './curiosity-results/curiosity-results
 import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
 import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
 import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
+import { GrowthMindsetResultsComponent } from './growth-mindset-results/growth-mindset-results.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset
     BlindQuizQueryComponent,
     BlindQuizSaveComponent,
     CuriosityResultsComponent,
-    GrowthMindsetQuizComponent
+    GrowthMindsetQuizComponent,
+    GrowthMindsetResultsComponent
   ],
   imports: [
     BrowserModule,
