@@ -14,11 +14,11 @@
           <div class="quizAnsCls">
             <div>
             
-              <input type="radio" value="True" name="{{entry.questionNo}}" ngModel required >
+              <input type="radio" value="True" name="{{entry.questionNo}}" ngModel="{{entry.userAnswer}}" >
               <label for="{{entry.userAnswer}}">True</label>
            </div>         
             <div>
-                <input id="{{entry.userAnswer}}" type="radio" value="False" name="{{entry.questionNo}}" ngModel required>
+                <input type="radio" value="False" name="{{entry.questionNo}}" ngModel="{{entry.userAnswer}}" >
                 <label for="{{entry.userAnswer}}">False</label>
               </div>
               <div hidden="!{{entry.userAnswer}}.hasError('required')">
@@ -31,7 +31,7 @@
                 <!-- <a routerLink="/curiosityResults" > -->
                   
                   <a [routerLink]="['/curiosityResults']">
-                  <button type="button" class="btn" class="submitBtn" ngSubmit="submitQuiz()">Submit</button>
+                  <button type="button" class="btn" class="submitBtn" >Submit</button>
                               
                 </a>
 
