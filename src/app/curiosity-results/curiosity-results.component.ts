@@ -26,7 +26,7 @@ constructor(private http: HttpClient, private route: ActivatedRoute,public datas
       
       console.log(this.entries);
       let headers = new HttpHeaders();
-      let body = JSON.stringify(this.entries);
+      //let body = JSON.stringify(this.entries);
     
     headers = headers.set('Access-Control-Allow-Origin','*');
       this.http.post<any>('http://localhost:8090/submitQuiz', this.entries,{headers}).subscribe(data => {
