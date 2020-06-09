@@ -9,4 +9,6 @@ import { DataService } from './service/dataService';
 })
 export class AppComponent {
   title = 'reflect-base';
+  menuVisible: boolean = true;
+
 }

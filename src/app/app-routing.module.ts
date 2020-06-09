@@ -7,6 +7,9 @@ import { CuriosityResultsComponent } from './curiosity-results/curiosity-results
 import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
 import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
 import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminAddQuizComponent } from './admin-add-quiz/admin-add-quiz.component';
+import { AdminEditQuizComponent } from './admin-edit-quiz/admin-edit-quiz.component';
 
 
 const routes: Routes = [
@@ -45,6 +48,18 @@ const routes: Routes = [
       {
         path: 'blindQuizSave',
         component: BlindQuizSaveComponent
+      },
+      {
+        path: 'admin',
+        component: AdminHomeComponent
+      },
+      {
+        path: 'adminAdd',
+        component: AdminAddQuizComponent
+      },
+      {
+        path: 'adminEdit',
+        component: AdminEditQuizComponent
       }
     ]
   }

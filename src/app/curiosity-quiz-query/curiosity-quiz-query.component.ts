@@ -11,6 +11,7 @@ import { DataService } from '../service/dataService';
 export class CuriosityQuizQueryComponent implements OnInit, OnDestroy {
   entries: Object[];
   dataQueryDetails: Object[];
+  answerSelected: boolean;
 
   constructor(private httpClient: HttpClient,private router: Router,public dataservice: DataService){
     let headers = new HttpHeaders();

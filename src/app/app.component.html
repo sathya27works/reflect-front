@@ -5,6 +5,14 @@
     
       <h1 class="appLogo">Cognizant Reflect Application</h1>
     
+      <div *ngIf="menuVisible" id="subHeader">
+      <a routerLink="/home" style="color: white ;margin-left: 620px;">
+        <span>Home</span>
+      </a>
+      <a routerLink="/admin" style="color: white ;margin-left: 10px;">
+        <span>Admin</span>
+      </a>
+    </div>
       <!-- <div class="spacer"></div>
       <a routerLink="/home">
         <span>Home</span>
