@@ -5,11 +5,13 @@ import { CuriosityQuizQueryComponent } from './curiosity-quiz-query/curiosity-qu
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CuriosityResultsComponent } from './curiosity-results/curiosity-results.component';
 import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset-quiz.component';
+import { GrowthMindsetResultsComponent } from './growth-mindset-results/growth-mindset-results.component';
 import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
 import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminAddQuizComponent } from './admin-add-quiz/admin-add-quiz.component';
 import { AdminEditQuizComponent } from './admin-edit-quiz/admin-edit-quiz.component';
+import { MakingtimeForMeComponent } from './makingtime-for-me/makingtime-for-me.component';
 
 
 const routes: Routes = [
@@ -42,6 +44,10 @@ const routes: Routes = [
         component: GrowthMindsetQuizComponent
       },
       {
+        path: 'growthMindsetResults',
+        component: GrowthMindsetResultsComponent
+      },
+      {
         path: 'blindQuizQuery',
         component: BlindQuizQueryComponent
       },
@@ -60,6 +66,10 @@ const routes: Routes = [
       {
         path: 'adminEdit',
         component: AdminEditQuizComponent
+	  },
+	  {
+        path: 'makingTimeforMeQuery',
+        component: MakingtimeForMeComponent
       }
     ]
   }

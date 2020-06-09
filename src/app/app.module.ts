@@ -15,6 +15,8 @@ import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminAddQuizComponent } from './admin-add-quiz/admin-add-quiz.component';
 import { AdminEditQuizComponent } from './admin-edit-quiz/admin-edit-quiz.component';
+import { GrowthMindsetResultsComponent } from './growth-mindset-results/growth-mindset-results.component';
+import { MakingtimeForMeComponent } from './makingtime-for-me/makingtime-for-me.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { AdminEditQuizComponent } from './admin-edit-quiz/admin-edit-quiz.compon
     AdminHomeComponent,
     AdminAddQuizComponent,
     AdminEditQuizComponent
+    GrowthMindsetResultsComponent,
+    MakingtimeForMeComponent
   ],
   imports: [
     BrowserModule,

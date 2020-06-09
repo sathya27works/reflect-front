@@ -1,14 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../service/dataService';
 
 @Component({
-  selector: 'app-growth-mindset-quiz',
-  templateUrl: './growth-mindset-quiz.component.html',
-  styleUrls: ['./growth-mindset-quiz.component.css']
+  selector: 'app-makingtime-for-me',
+  templateUrl: './makingtime-for-me.component.html',
+  styleUrls: ['./makingtime-for-me.component.css']
 })
-export class GrowthMindsetQuizComponent implements OnInit, OnDestroy {
+export class MakingtimeForMeComponent implements OnInit, OnDestroy {
   entries: Object[];
   dataQueryDetails: Object[];
 
@@ -16,19 +16,16 @@ export class GrowthMindsetQuizComponent implements OnInit, OnDestroy {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8')
                       .set('Access-Control-Allow-Origin','*');
-    this.httpClient.get('http://localhost:8090/quiz/growthMindset',{headers: headers})
+    this.httpClient.get('http://localhost:8090/quiz/makingTimeforMe',{headers: headers})
     .subscribe(
-      (data:any[]) => {        
-          console.log(data); 
+      (data:any[]) => {
           this.entries = data;
       }
     )
 }
-
-ngOnInit(): void {
-}
-ngOnDestroy() {
-  this.dataservice.entries = this.entries; 
-}
-
+  ngOnInit(): void {
+  }
+  ngOnDestroy() {
+    this.dataservice.entries = this.entries; 
+ }
 }
