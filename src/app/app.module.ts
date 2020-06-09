@@ -30,7 +30,7 @@ import { MakingtimeForMeComponent } from './makingtime-for-me/makingtime-for-me.
     GrowthMindsetQuizComponent,
     AdminHomeComponent,
     AdminAddQuizComponent,
-    AdminEditQuizComponent
+    AdminEditQuizComponent,
     GrowthMindsetResultsComponent,
     MakingtimeForMeComponent
   ],
