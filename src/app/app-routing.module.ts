@@ -8,7 +8,7 @@ import { GrowthMindsetQuizComponent } from './growth-mindset-quiz/growth-mindset
 import { GrowthMindsetResultsComponent } from './growth-mindset-results/growth-mindset-results.component';
 import { BlindQuizQueryComponent } from './blind-quiz-query/blind-quiz-query.component';
 import { BlindQuizSaveComponent } from './blind-quiz-save/blind-quiz-save.component';
-
+import { MakingtimeForMeComponent } from './makingtime-for-me/makingtime-for-me.component';
 
 const routes: Routes = [
   {
@@ -50,6 +50,10 @@ const routes: Routes = [
       {
         path: 'blindQuizSave',
         component: BlindQuizSaveComponent
+      },
+      {
+        path: 'makingTimeforMeQuery',
+        component: MakingtimeForMeComponent
       }
     ]
   }

@@ -1,11 +1,10 @@
-<div class="container col-xs-12 col-md-12" style="margin-bottom: 70px;"> 
+<div class="container col-xs-12 col-md-12"> 
     <div class="row">
       <div class="col-xs-12 col-md-12 mainDiv">
           <div class="commonHeader">
-            <span>Growth Mindset Quiz</span>  
+            <span>Making Time for Me</span>  
           </div>
-          <hr/>
-          <div class="quizSection" *ngFor="let entry of entries">
+          <hr/><div class="quizSection" *ngFor="let entry of entries">
             <div class="queryId appTxt" style="font-weight: bold;margin-bottom: 10px;">Question: {{entry.questionNo}}</div>
             <div class="quizQuestionCls appTxt">
               {{ entry.question }}
@@ -32,3 +31,4 @@
       </div>
     </div>
 </div>
+          
