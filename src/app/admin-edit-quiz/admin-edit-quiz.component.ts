@@ -9,15 +9,29 @@ import { DataService } from '../service/dataService';
 })
 export class AdminEditQuizComponent implements OnInit {
 
+  entries: Object[];
+  dataQueryDetails: Object[];
+  answerSelected: boolean;
 
-  constructor(){
-    
+  constructor(private httpClient: HttpClient,public dataservice: DataService){
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8')
+                      .set('Access-Control-Allow-Origin','*');
+    this.httpClient.get('http://localhost:8090/quiz/curiosity',{headers: headers})
+    .subscribe(
+      (data:any[]) => {
+        
+          console.log("Received data"); 
+          this.entries = data;
+      }
+    )
 }
   
 
-  ngOnInit(): void {
-  }
- 
-
+ngOnInit(): void {
+}
+ngOnDestroy() {
+  this.dataservice.entries = this.entries; 
+}
 
 }
