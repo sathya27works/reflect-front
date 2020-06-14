@@ -12,21 +12,27 @@ export class AdminEditQuizComponent implements OnInit {
   entries: Object[];
   dataQueryDetails: Object[];
   answerSelected: boolean;
+  selectedgroup: any
 
   constructor(private httpClient: HttpClient,public dataservice: DataService){
-    let headers = new HttpHeaders();
-    headers = headers.set('Content-Type', 'application/json; charset=utf-8')
-                      .set('Access-Control-Allow-Origin','*');
-    this.httpClient.get('http://localhost:8090/quiz/curiosity',{headers: headers})
-    .subscribe(
-      (data:any[]) => {
-        
-          console.log("Received data"); 
-          this.entries = data;
-      }
-    )
+   
 }
+
+getQuizTypeDetails(){
+  console.log(this.selectedgroup)
   
+  let headers = new HttpHeaders();
+  headers = headers.set('Content-Type', 'application/json; charset=utf-8')
+                    .set('Access-Control-Allow-Origin','*');
+  this.httpClient.get('http://localhost:8090/quiz/'+this.selectedgroup,{headers: headers})
+  .subscribe(
+    (data:any[]) => {
+      
+        console.log("Received data"); 
+        this.entries = data;
+    }
+  )
+}
 
 ngOnInit(): void {
 }

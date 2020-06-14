@@ -1,16 +1,9 @@
-.mainDiv{
-    margin-top: 100px;
-  }
-  .commonHeader{
-    color: #0033A0;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Arial;
-  }
-  .submitBtn{
+.submitBtn{
     background-color: #0033A0;
     color: white;
-    float: right;
+    float: left;
+    margin-top: 20px;
+    margin-left: 550px;
     border-radius: 10px;
     justify-content: center;
     border: 1px solid #eee;
@@ -19,13 +12,13 @@
     font-size: 20px;
     font-family: Arial;
   }
-  a{
-    text-decoration: none;
-    color: white;
+
+  .mainDiv{
+    margin-top: 100px;
   }
-  hr{
-    border-top: 1px solid #404040;
-  }
-  .quizAnsCls{
-    margin-top: 20px;
+  .commonHeader{
+    color: #0033A0;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial;
   }

@@ -1,4 +1,21 @@
-<table style="margin-top: 200px; width: 100%;" cellpadding="0" cellspacing="0">
+<div class="container col-xs-12 col-md-12"> 
+    <div class="row">
+      <div class="col-xs-12 col-md-12 mainDiv">
+          <div class="commonHeader">
+            <span>Edit Quiz Details</span>  
+          </div>
+          <hr/>
+<p>Select Type of quiz which needs to be modified:</p>
+<div>
+    <select [(ngModel)]="selectedgroup">
+        <option value="curiosity">curiosity</option>
+        <option value="growthMindset">growthMindset</option>
+        <option value="makeTimeForMe">makeTimeForMe</option>
+    </select>
+    </div>
+  <input type="button" (click)="getQuizTypeDetails()" value="submit"/>
+
+<table style="margin-top: 20px; width: 100%;" cellpadding="0" cellspacing="0">
     <tr>
         <th style="padding: 3px;">
             <a>QuestionNo</a>
@@ -33,7 +50,7 @@
            </td>
            <td style="padding: 3px;">
                <div style="margin-right: 6px;">
-                    <input type="text" value="{{entry.userAnswer}}" style="width:100%;" ngModel="{{entry.userAnswer}}" >
+                    <input type="text" value="{{entry.answer}}" style="width:100%;" ngModel="{{entry.answer}}" >
                </div>
            </td>
            <td style="padding: 3px;">
@@ -46,8 +63,11 @@
        </table>
 
        <div class="submitBtnDiv">
-          <a [routerLink]="['/curiosityResults']">
+          <a [routerLink]="['/adminResults']">
           <button type="button" class="btn" class="submitBtn" >Save</button>              
         </a>
 
   </div>
+</div>
+</div>
+</div>
