@@ -13,7 +13,7 @@ import { AdminAddQuizComponent } from './admin-add-quiz/admin-add-quiz.component
 import { AdminEditQuizComponent } from './admin-edit-quiz/admin-edit-quiz.component';
 import { MakingtimeForMeComponent } from './makingtime-for-me/makingtime-for-me.component';
 import { AdminResultsComponent } from './admin-results/admin-results.component';
-
+import { DashboardReportsHomeComponent } from './dashboard-reports-home/dashboard-reports-home.component';
 
 const routes: Routes = [
   {
@@ -75,6 +75,10 @@ const routes: Routes = [
 	  {
         path: 'makingTimeforMeQuery',
         component: MakingtimeForMeComponent
+      },
+      {
+	path: 'dashboard&Reports',
+        component: DashboardReportsHomeComponent 
       }
     ]
   }
