@@ -28,8 +28,7 @@
             </tbody>
           </table>
           <div class="form-group col-xs-12" align="center">
-              <button [routerLink]="['/downloadReport']" class="btn btn-primary btnBckgrd" style="font-family: Arial;color: white;">Download Report
-              </button>
+              <button (click)="generatePdf()" class="btn btn-primary btnBckgrd appTxt">Download Report</button>
           </div>
       </div>
     </div>
