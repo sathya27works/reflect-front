@@ -25,13 +25,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "../cts-reflect/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "../cts-reflect/node_modules/jquery/dist/jquery.min.js",
-              "../cts-reflect/node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "../cts-reflect/node_modules/pdfmake/build/pdfmake.js",
-              "../cts-reflect/node_modules/pdfmake/build/vfs_fonts.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/pdfmake/build/pdfmake.js",
+              "node_modules/pdfmake/build/vfs_fonts.js"
             ]
           },
           "configurations": {
