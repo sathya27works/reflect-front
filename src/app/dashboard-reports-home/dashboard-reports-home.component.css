@@ -1,0 +1,36 @@
+.mainDiv{
+    margin-top: 100px;
+  }
+  .commonHeader{
+    color: #0033A0;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  .submitBtn{
+    background-color: #0033A0;
+    color: white;
+    float: right;
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid #eee;
+    height: 40px;
+    width: 100px;
+    font-size: 22px;
+    font-family: Arial;
+  }
+  .userName{
+      font-weight: bold;
+      font-size: 20px;
+  }
+  table {
+    font-family: arial;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }

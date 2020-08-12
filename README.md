@@ -1,27 +1,15 @@
-# ReflectBase
+# CognizantReflectBase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+This project was developed to allow users to attend the quiz on category basis and show them the results accordingly. Also Admin will have full access to the application to view the results & process it.
 
-## Development server
+## Use of ReflectApp
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The project to used to attend the quiz by users in online and Admin can track the results by reports
 
-## Code scaffolding
+## User Accessbility
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Users can get started by login with their credentials and make use of the quiz. And Admin login page will be differ from Users page and they can add multiple Admin as well.
 
-## Build
+## Guide to Users
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Users can get guidance from Admin to get access & results reports.

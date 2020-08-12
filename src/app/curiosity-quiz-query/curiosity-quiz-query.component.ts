@@ -1,31 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from '../service/dataService';
 
 @Component({
   selector: 'app-curiosity-quiz-query',
   templateUrl: './curiosity-quiz-query.component.html',
   styleUrls: ['./curiosity-quiz-query.component.css']
 })
-export class CuriosityQuizQueryComponent implements OnInit {
+export class CuriosityQuizQueryComponent implements OnInit, OnDestroy {
   entries: Object[];
+  dataQueryDetails: Object[];
+  answerSelected: boolean;
 
-    constructor() {
-     
-    this.entries = [
-      {
-        queryid:"curiousityQuiz1",
-        question: "A Need for Cognition is a scientific measure of intellectual curiosity. Take the quiz by answering true or false and PLACING JUST THE LETTER Y in the column you agree with"
+  constructor(private httpClient: HttpClient,private router: Router,public dataservice: DataService){
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8')
+                      .set('Access-Control-Allow-Origin','*');
+    this.httpClient.get('http://localhost:8090/quiz/curiosity',{headers: headers})
+    .subscribe(
+      (data:any[]) => {
         
-      },
-      {
-        queryid:"curiousityQuiz1",
-        question: "I would prefer complex to simple problems."
-        
+          console.log("Received data"); 
+          this.entries = data;
       }
-    ];
-   
-  }
+    )
+}
+  
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
+  ngOnDestroy() {
+    this.dataservice.entries = this.entries; 
+ }
 
 }

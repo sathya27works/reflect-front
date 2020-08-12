@@ -1,0 +1,34 @@
+<div class="container col-xs-12 col-md-12" style="margin-bottom: 70px;"> 
+    <div class="row">
+      <div class="col-xs-12 col-md-12 mainDiv">
+          <div class="commonHeader">
+            <span>Growth Mindset Quiz</span>  
+          </div>
+          <hr/>
+          <div class="quizSection" *ngFor="let entry of entries">
+            <div class="queryId appTxt" style="font-weight: bold;margin-bottom: 10px;">Question: {{entry.questionNo}}</div>
+            <div class="quizQuestionCls appTxt">
+              {{ entry.question }}
+            </div>
+            <div class="quizAnsCls appTxt">
+              <div>             
+                <input type="radio" value="True" name="{{entry.questionNo}}" ngModel="{{entry.userAnswer}}" >&nbsp;
+                <label for="{{entry.userAnswer}}">True</label>
+             </div>         
+             <div>
+                  <input type="radio" value="False" name="{{entry.questionNo}}" ngModel="{{entry.userAnswer}}">&nbsp;
+                  <label for="{{entry.userAnswer}}">False</label>
+             </div>
+             <div hidden="!{{entry.userAnswer}}.hasError('required')">
+                Please provide the answer
+             </div>
+            </div>
+            </div>
+            <div class="submitBtnDiv">                
+                    <a [routerLink]="['/growthMindsetResults']">
+                    <button type="button" class="btn" class="submitBtn" >Submit</button>                                
+                  </a>  
+            </div>
+      </div>
+    </div>
+</div>
